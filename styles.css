@@ -8,7 +8,6 @@
   --gold: #c8a24a;
   --gold-dark: #8e6d25;
   --blue: #263f67;
-  --blue-dark: #172740;
   --white: #ffffff;
   --radius: 22px;
   --shadow: 0 18px 50px rgba(38, 33, 29, 0.12);
@@ -40,7 +39,7 @@ body {
 
 .hero {
   text-align: center;
-  padding: 56px 10px 26px;
+  padding: 50px 10px 22px;
 }
 
 .brand {
@@ -68,6 +67,17 @@ h1 {
   font-size: clamp(0.95rem, 2.4vw, 1.15rem);
 }
 
+.app-icon {
+  width: 112px;
+  height: 112px;
+  object-fit: cover;
+  border-radius: 26px;
+  margin-top: 24px;
+  border: 1px solid var(--rule);
+  box-shadow: 0 16px 40px rgba(38, 33, 29, 0.16);
+  background: var(--paper);
+}
+
 .card {
   background: rgba(255, 250, 240, 0.92);
   border: 1px solid var(--rule);
@@ -91,8 +101,38 @@ h1 {
   font-size: 1.03rem;
 }
 
+.section-text {
+  margin-top: 0;
+}
+
+.screenshots-card {
+  overflow: hidden;
+}
+
+.screenshot-strip {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding: 8px 2px 18px;
+  margin: 10px -2px 0;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+}
+
+.screenshot-strip img {
+  flex: 0 0 auto;
+  width: min(245px, 72vw);
+  max-height: 520px;
+  object-fit: contain;
+  border-radius: 24px;
+  border: 1px solid var(--rule);
+  background: #111;
+  box-shadow: 0 14px 34px rgba(38, 33, 29, 0.16);
+  scroll-snap-align: start;
+}
+
 .downloads-card {
-  margin-top: 6px;
+  margin-top: 18px;
 }
 
 .download-list {
@@ -144,7 +184,7 @@ h1 {
 }
 
 .download.soon {
-  opacity: 0.68;
+  opacity: 0.72;
 }
 
 .checksum {
@@ -207,5 +247,11 @@ h1 {
 
   .card {
     border-radius: 18px;
+  }
+
+  .app-icon {
+    width: 96px;
+    height: 96px;
+    border-radius: 22px;
   }
 }
